@@ -1,5 +1,5 @@
 <?php
-echo 'Зад. 4<br/>';
+echo 'Зад. 4<br />';
 
 class Car
 {
@@ -34,11 +34,11 @@ class SportCar extends Car
         } else {
             $this->transmissionManual();
         }
-        echo "<br>";
+        echo "<br />";
         $this->engine();
-        echo "Автомобиль остановился<br>";
-        echo "Трансмиссия отключена<br>";
-        echo "Двигатель отключен<br>";
+        echo "Автомобиль остановился<br />";
+        echo "Трансмиссия отключена<br />";
+        echo "Двигатель отключен<br />";
     }
 
     function engine()
@@ -47,34 +47,34 @@ class SportCar extends Car
         $road = 0;
         $temperature = 0;
         $overHeatTemp = 90;
-        echo "Мощность автомобиля " . $hp . " лошадинных сил<br>";
+        echo "Мощность автомобиля " . $hp . " лошадинных сил<br />";
         while ($road < $this->distance) {
             $road += $this->speed;
             if ($temperature >= $overHeatTemp) {
                 $temperature -= 10;
-                echo "Вентилятор включен <br>";
+                echo "Вентилятор включен <br />";
             } else {
                 $temperature += 5;
             }
-            echo "Автомобиль проехал " . $road . " метров. <br>";
-            echo "Температура " . $temperature . " градусов<br>";
+            echo "Автомобиль проехал " . $road . " метров. <br />";
+            echo "Температура " . $temperature . " градусов<br />";
         }
     }
 
     function transmissionAuto()
     {
-        echo "У автомобиля, автоматическая коробка передач.<br>";
+        echo "У автомобиля, автоматическая коробка передач.<br />";
         $this->mBack();
     }
 
     function transmissionManual()
     {
-        echo "У автомобиля ручная коробка передач. <br>";
+        echo "У автомобиля ручная коробка передач. <br />";
         $maxSpeedForFirstGear = 20;
         if ($this->speed > $maxSpeedForFirstGear) {
-            echo "Поехал на второй скорости.<br>";
+            echo "Поехал на второй скорости.<br />";
         } else {
-            echo "Поехал на первой скорости.<br>";
+            echo "Поехал на первой скорости.<br />";
         }
         $this->mBack();
     }
@@ -84,7 +84,7 @@ trait moveBackward
 {
     public function mBack()
     {
-        echo "Заднеприводный.<br>";
+        echo "Заднеприводный.<br />";
     }
 }
 
