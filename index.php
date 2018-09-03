@@ -1,5 +1,5 @@
 <?php
-echo 'Зад. 4<br />';
+echo 'Зад. 4<br/>';
 
 class Car
 {
